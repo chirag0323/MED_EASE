@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MedEase - Login</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/login.css">
+</head>
+<body>
+  <div class="container">
+   <h1>MedEase</h1>
+    <form id="login-form">
+      <input id="email" type="email" placeholder="Enter email" required>
+      <input id="password" type="password" placeholder="Enter password" required>
+      <button type="submit">Login</button>
+      <label id="forgotpasslabel">Forgot Password?</label>
+      <p id="error-message"></p>
+      <p>Don't have an account? <a href="register.html">SignUp</a></p>
+    </form>
+  </div>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+    const firebaseConfig = {
+  apiKey: "AIzaSyBJbVwagr-SpdWCjWpgtrHKm9gVARy9S-Q",
+  authDomain: "medease-e22ba.firebaseapp.com",
+  projectId: "medease-e22ba",
+  storageBucket: "medease-e22ba.appspot.com",
+  messagingSenderId: "842599844123",
+  appId: "1:842599844123:web:3da7cbdb4b1ed247deabbe",
+  measurementId: "G-WPNWPSK7SM"
+};
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      let forgotpasslabel = document.getElementById('forgotpasslabel')
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          // Redirect to home page
+          window.location.href = "frontend.html";
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // Display error message to the user
+          document.getElementById('error-message').innerText = 'Wrong Username or Password';
+        });
+    });
+
+    let ForgotPassword = () => {
+      sendPasswordResetEmail(auth , document.getElementById('email').value)
+      .then(() => {
+        alert('Password reset email sent. Check your inbox.');
+      })
+      .catch((error) => {
+        console.log(error.code);
+        console.log(errorMessage);
+      })
+    }
+    forgotpasslabel.addEventListener('click', ForgotPassword);
+  </script>
+</body>
+</html>

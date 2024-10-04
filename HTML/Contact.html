@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #444;
+        }
+
+        .note {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .scroll-bar {
+            overflow: auto;
+        }
+
+        .topbar,
+        .secondbar {
+            border-top: none;
+        }
+
+        .topbar {
+            background-color: black;
+            position: relative;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            padding: 17px 15px;
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+            display: flex;
+            justify-content: space-between; /* Align items horizontally */
+            align-items: center; /* Align items vertically */
+        }
+
+        .topbar .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar .navigation ul li {
+            margin-right: 10px;
+        }
+
+        .topbar .navigation ul li:last-child {
+            margin-right: 0;
+        }
+
+        .topbar .navigation ul li span,
+        .topbar .navigation ul li a {
+            color: silver;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            padding: 6px 40px;
+        }
+
+        .topbar .navigation ul li a button {
+            color: black;
+        }
+
+        .topbar .navigation ul li a:hover {
+            background-color: darkcyan;
+        }
+
+        /* Align right */
+        .topbar .navigation ul li.right-align {
+            margin-left: auto;
+        }
+
+        /* Secondbar styles */
+        .secondbar {
+            background-color: black;
+            padding: 7px 15px;
+            box-sizing: border-box; /* Ensure padding is included in width calculation */
+            display: flex;
+            justify-content: space-between; /* Align items horizontally */
+            align-items: center; /* Align items vertically */
+        }
+
+        .secondbar .logoo {
+            margin-left: 50px; /* Align logo to the right */
+        }
+
+        .secondbar .logoo img {
+            width: 130px; /* Set maximum width for the logo */
+        }
+
+        .secondbar .navigation2 {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .secondbar .navigation2 a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 55px; /* Padding for the buttons */
+            border-radius: 20px;
+        }
+
+        .secondbar .navigation2 a:hover {
+            background-color: darkcyan;
+        }
+
+        .container {
+            margin-top: 50px;
+            width: 60%;
+            height: 40vh;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 25px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: black;
+            color: #FFF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .inputBox {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .inputBox input[type="text"],
+        .inputBox input[type="email"] {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.2);
+            padding: 0px 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .inputBox textarea {
+            width: 100%;
+            height: 120px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.2);
+            padding: 0px 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .inputBox button {
+            width: 100%;    
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            background: #444;
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .inputBox button:hover {
+            background: darkcyan;
+            transition: all 0.3s ease;
+        }
+
+        ::placeholder {
+            font-size: 16px;
+        }
+
+        .alert {
+            width: 100%;
+            background: rgb(0, 255, 106);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 900;
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="note">Kindly book your appointment and choose your desired expert before proceeding further</div>
+    <div class="scroll-bar">
+        <div class="topbar">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="ambulance.html">Emergency Booking</a>
+                    </li>
+                    <li>
+                        <a href="appointment.html">Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="secondbar">
+            <div class="logoo">
+                <a href="frontend.html">
+                    <img src="../IMAGES/MedEase Logo 2.jpg" alt="">
+                </a>
+            </div>
+            <div class="navigation2">
+                <a href="frontend.html">
+                    <i class="fa-solid fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html">
+                    <i class="fa-solid fa-question"></i>
+                    <span>About</span>
+                </a>
+                <a href="Speciality.html">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Our Specialties</span>
+                </a>
+                <a href="Facility.html">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Facilities</span>
+                </a>
+                <a href="Gallery.html">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="Career.html">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Career</span>
+                </a>
+                <a href="Contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <form action="" id="contactForm">
+                <div class="alert">Your message sent</div>
+
+                <div class="inputBox">
+                    <input type="text" id="name" placeholder="Your name...." />
+                </div>
+
+                <div class="inputBox">
+                    <input type="email" id="emailid" placeholder="Your Email....." />
+                </div>
+
+                <div class="inputBox">
+                    <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+
+                <div class="inputBox">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+            <script src="../JS/Contact.js"></script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedEase Hospital</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./pro1images/aceongEoi.png');
+            background-size: 1300px;
+            background-position:center;
+            margin-bottom: 2200px;
+            font-family: Arial, sans-serif;
+            color: rgb(13, 1, 1);
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay color with 50% opacity */
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .founders {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .founders h2 {
+            margin-bottom: 20px;
+        }
+
+        .founders-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px; /* Fixed height for the founder images */
+            overflow: hidden; /* Hide any overflow */
+        }
+
+        .founders-images img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover; /* Fill the container while preserving aspect ratio */
+            display: none; /* Hide all images by default */
+        }
+        /* Common styles */
+
+
+.topbar {
+    background-color: black;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    padding: 17px 15px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.topbar .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .navigation ul li {
+    margin-right: 10px;
+}
+
+.topbar .navigation ul li:last-child {
+    margin-right: 0;
+}
+
+.topbar .navigation ul li span,
+.topbar .navigation ul li a  {
+    
+    
+    color:silver;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 6px 40px;
+    
+}
+
+.topbar .navigation ul li a button {
+    color: black;
+    
+    
+}
+
+.topbar .navigation ul li a:hover {
+    background-color: darkcyan;
+}
+
+/* Align right */
+.topbar .navigation ul li.right-align {
+    margin-left:150px;
+}
+
+/* Secondbar styles */
+.secondbar {
+    background-color: black;
+    padding: 7px 15px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.secondbar .logoo {
+    margin-left: 50px; /* Align logo to the right */
+}
+
+.secondbar .logoo img {
+     width: 150px; /* Set maximum width for the logo */
+   
+   
+}
+
+.secondbar .navigation2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.secondbar .navigation2 a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 55px; /* Padding for the buttons */
+    border-radius: 20px;
+}
+
+.secondbar .navigation2 a:hover {
+    background-color: darkcyan;
+}
+
+.container {
+        max-width: 8000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color:silver;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .container p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .footer-widget {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            background-color: silver;
+        }
+
+        .footer-widget .contact-info {
+            flex: 1;
+        }
+
+        .footer-widget .services-info {
+            flex: 1;
+            margin-left: 20px; /* Add space between the sections */
+        }
+
+        .footer-widget h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .footer-widget ul {
+            padding-left: 20px;
+        }
+
+        .footer-widget li {
+            margin-bottom: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="navigation">
+            <ul>
+                <li>
+                    
+                    <a href="ambulance.html">Emergency Booking</a>
+                </li>
+                <li>
+                    <!-- <a href="https://neelamhospital.com/">ONLINE REPORT
+                        <!-- <button>ONLINE REPORT</button> -->
+                    </a> -->
+                    <a href="appointment.html">Appointment
+                        <!-- <button>APPOINTMENT</button> -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secondbar">
+        <div class="logoo">
+            <a href="frontend.html">
+                <img src="../IMAGES/MedEase Logo 2.jpg" alt="">
+            </a>
+        </div>
+        <div class="navigation2">
+            <a href="frontend.html">
+                <i class="fa-solid fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html">
+                <i class="fa-solid fa-question"></i>
+                <span>About</span>
+            </a>
+            <a href="Speciality.html">
+                <i class="fa-solid fa-star"></i>
+                <span>Our Specialties</span>
+            </a>
+            <a href="Facility.html">
+                <i class="fa-solid fa-house-medical"></i>
+                <span>Facilities</span>
+            </a>
+            <a href="Gallery.html">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>Gallery</span>
+            </a>
+            <a href="Career.html">
+                <i class="fa-solid fa-house-medical"></i>
+                <span>Career</span>
+            </a>
+            <a href="Contact.html">
+                <i class="fa-solid fa-phone"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="content">
+            <h1>Welcome to MedEase MediServices</h1>
+            <p>At MedEase MediServices Management System, our mission is to empower users with seamless access to essential healthcare services. Designed to streamline the healthcare experience, our platform offers convenient features like ambulance booking and easy access to the array of services provided by our hospital.
+
+                Our platform is built on a foundation of excellence and integrity, reflecting our commitment to delivering compassionate and high-quality healthcare to our community. With a user-centric approach, we prioritize the needs of our users, ensuring they have the tools they need to navigate their health journey efficiently.
+                
+                One of the standout features of the MedEase Hospital Management System is the ability to book an ambulance with just a few clicks. This ensures prompt assistance during emergencies, providing peace of mind to our users and their loved ones.
+                
+                Additionally, our platform highlights the comprehensive range of services offered by MedEase Hospital. From emergency care to general medicine, surgery, maternity care, and diagnostic services, we strive to address the diverse healthcare needs of our patients. Our state-of-the-art facilities and advanced technology further enable us to deliver the highest standard of care.
+                
+                What distinguishes MedEase Hospital Management System is our unwavering dedication to excellence. Our team of experienced healthcare professionals and support staff are committed to making a positive impact on the health and well-being of our users.
+                
+                As we continue to enhance and expand our platform, our commitment to providing users with exceptional healthcare experiences remains steadfast. We invite users to explore the MedEase Hospital Management System and discover how we can support their health and wellness journey effectively."
+                
+                This revision emphasizes the key features of the MedEase Hospital Management System, such as ambulance booking and access to hospital services, while maintaining a focus on excellence and user satisfaction.</p>
+        </div>
+    </div>
+
+    <div class="founders">
+        <h2>THE FOUNDERS OF MED EASE</h2>
+        <div class="founders-images">
+            <img src="../IMAGES/chirag.jpg" alt="Founder 1">
+            <img src="../IMAGES/aayush.jpg" alt="Founder 2">
+            <img src="../IMAGES/abrol.jpg" alt="Founder 3">
+        </div>
+    </div>
+
+    
+        <div class="container">
+            <h2>Who Are We?</h2>
+            <p>MedEase Hospital is a leading healthcare provider dedicated to delivering compassionate and high-quality healthcare services to our community. With a focus on excellence and innovation, we strive to make a positive impact on the health and well-being of our patients.</p>
+            <p>Our mission is to provide seamless access to essential healthcare services, ensuring that our patients receive the care and support they need. We are committed to delivering patient-centered care, prioritizing the individual needs and preferences of each patient.</p>
+            <p>At MedEase Hospital, we offer a comprehensive range of services, including emergency care, general medicine, surgery, maternity care, and diagnostic services. Our state-of-the-art facilities and experienced healthcare professionals enable us to provide the highest standard of care to our patients.</p>
+            <p>We are dedicated to continuous improvement and innovation in healthcare delivery, constantly striving to enhance our services and expand our capabilities. Our team is committed to providing exceptional healthcare experiences, ensuring that our patients receive the best possible care.</p>
+            <p>Discover how MedEase Hospital can support your health and wellness journey. We are here to care for you.</p>
+        </div>
+    
+    
+
+    <script>
+        var foundersImages = document.querySelectorAll('.founders-images img');
+        var currentFounderIndex = 0;
+
+        function rotateFounders() {
+            foundersImages.forEach(function(image) {
+                image.style.display = 'none';
+            });
+
+            currentFounderIndex = (currentFounderIndex + 1) % foundersImages.length;
+            foundersImages[currentFounderIndex].style.display = 'block';
+
+            setTimeout(rotateFounders, 3000); // Rotate every 3 seconds
+        }
+
+       rotateFounders(); // Start the rotation
+
+       
+    </script>
+    <div class="footer-widget">
+       
+        <div class="services-info">
+            <h1>Services</h1>
+            <ul>
+                <li>Department of Plastic & Cosmetic Surgery</li>
+                <li>Nephrology with Dialysis Facility</li>
+                <li>Department of Gastroenterology</li>
+                <li>Department of Dentistry</li>
+                <li>Department of Obstetrics & Gynaecology</li>
+                <li>Department of Radiology</li>
+                <li>Department of Pschiyatry</li>
+                <li>Department of ENT</li>
+                <li>Department of Cardiology</li>
+                <li>PICU & NICU</li>
+                <li>Orthopaedics and Joint Replacement</li>
+                <li>Department of Neurosurgery</li>
+                <li>Kidney Transplant</li>
+            </ul>
+        </div>
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p>LH-3– LAST BENCH – De-Morgan Block – Chitkara University – Rajpura,Punjab</p>
+            <p>59756 12359</p>
+            <p>Medease@gmail.com</p>
+        </div>
+    </div>
+
+   
+    
+    
+   
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Tutorial</title>
+
+    <!-- leaflet css  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.74.0/dist/L.Control.Locate.min.css" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 80vh; /* Adjusted height to make room for the button and link */
+        }
+
+        #controls {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #locate-button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <!-- Controls -->
+    <div id="controls">
+        <a href="frontend.html">
+            <button id="locate-button" onclick="showPopup()">Submit Current Location</button>
+        </a>
+        <br>
+    </div>
+
+    <!-- leaflet js  -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+    <script>
+        // Map initialization 
+        var map = L.map('map').setView([28.3949, 84.1240], 8);
+
+        // Esri World Imagery layer
+        var esriWorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '© Esri'
+        });
+
+        esriWorldImagery.addTo(map);
+
+        // Add a layer control to switch between layers
+        var baseLayers = {
+            "Esri World Imagery": esriWorldImagery
+        };
+
+        L.control.layers(baseLayers).addTo(map);
+
+        L.control.locate().addTo(map);
+
+        // Locate button click event
+        function showPopup() {
+            // Display a pop-up message
+            alert("Location submitted successfully. Please wait for redirection.");
+
+            // Get the current location
+            map.locate({ setView: true });
+        }
+    </script>
+</body>
+</html>

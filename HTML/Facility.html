@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Specialist Doctors</title>
+    <style>
+           body {
+            background-color: white;
+            margin: 0;
+        }
+
+        .scroll-bar {
+            overflow: auto;
+        }
+
+        .topbar {
+            background-color: black;
+            position: relative;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            padding: 17px 15px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar .navigation ul li {
+            margin-right: 10px;
+        }
+
+        .topbar .navigation ul li:last-child {
+            margin-right: 0;
+        }
+
+        .topbar .navigation ul li span,
+        .topbar .navigation ul li a {
+            color: silver;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            padding: 6px 40px;
+        }
+
+        .topbar .navigation ul li a button {
+            color: black;
+        }
+
+        .topbar .navigation ul li a:hover {
+            background-color: darkcyan;
+        }
+
+        .topbar .navigation ul li.right-align {
+            margin-left: auto;
+        }
+
+        .secondbar {
+            background-color: black;
+            padding: 7px 15px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .secondbar .logoo {
+            margin-left: 50px;
+        }
+
+        .secondbar .logoo img {
+            width: 130px;
+        }
+
+        .secondbar .navigation2 {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .secondbar .navigation2 a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 55px;
+            border-radius: 20px;
+        }
+
+        .secondbar .navigation2 a:hover {
+            background-color: darkcyan;
+        }
+
+        /* from here */
+        body {
+            background-color: black;
+            color: silver;
+            font-family: Arial, sans-serif;
+        }
+
+        .red-text {
+            color: red;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .block {
+            width: 45%; /* Set the width to 45% to allow for some space between the blocks */
+            margin: 10px; /* Add some margin to create space between the blocks */
+            text-align: center;
+            position: relative; /* Set position to relative */
+        }
+        .block img {
+            max-width: 100%;
+            height: auto;
+        }
+        .block p {
+            margin: 5px 0; /* Add some margin around the paragraph */
+        }
+        .block a {
+            position: absolute; /* Set position to absolute */
+            top: 0; /* Align the anchor to the top of the block */
+            left: 0; /* Align the anchor to the left of the block */
+            width: 100%; /* Make the anchor fill the entire block */
+            height: 100%; /* Make the anchor fill the entire block */
+            display: none; /* Hide the anchor by default */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline */
+            font-size: 20px; /* Font size */
+            font-weight: bold; /* Font weight */
+            justify-content: center; /* Center the text horizontally */
+            align-items: center; /* Center the text vertically */
+        }
+        .block:hover a {
+            display: flex; /* Display the anchor when hovering over the block */
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-bar">
+        <div class="topbar">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="ambulance.html">Emergency Booking</a>
+                    </li>
+                    <li>
+                        <a href="appointment.html">Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="secondbar">
+            <div class="logoo">
+                <a href="frontend.html">
+                    <img src="../IMAGES/MedEase Logo 2.jpg" alt="">
+                </a>
+            </div>
+            <div class="navigation2">
+                <a href="frontend.html">
+                    <i class="fa-solid fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html">
+                    <i class="fa-solid fa-question"></i>
+                    <span>About</span>
+                </a>
+                <a href="Speciality.html">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Our Specialties</span>
+                </a>
+                <a href="Facility.html">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Facilities</span>
+                </a>
+                <a href="Gallery.html">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="Career.html">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Career</span>
+                </a>
+                <a href="Contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+
+        <h1><strong><center>OUR SPECIALIST DOCTORS</center></strong></h1>
+        <p class="red-text">NOTE:</p>
+        <p>Choose your desired doctors according to your time slot.</p>
+
+        <div class="container">
+            <div class="block">
+                <img src="../doctor images/3.jpg" alt="Doctor 1">
+                <a href="http://127.0.0.1:5500/HTML/appointment.html">Click To Proceed To Appointment Page</a>
+                <p>Name: Dr. CHIRAG</p>
+                <p>Specialization: Cardiology</p>
+                <p>Email: Chirag@gmail.com</p>
+                <p>Working Hours: 9am - 5pm</p>
+            </div>
+            <div class="block">
+                <img src="../doctor images/4.jpg" alt="Doctor 2">
+                <a href="http://127.0.0.1:5500/HTML/appointment.html">Click To Proceed To Appointment Page</a>
+                <p>Name: Dr. AAYUSH</p>
+                <p>Specialization: Pediatrics</p>
+                <p>Email: aayush@gmail.com</p>
+                <p>Working Hours: 8am - 4pm</p>
+            </div>
+            <div class="block">
+                <img src="../doctor images/2.jpg" alt="Doctor 3">
+                <a href="http://127.0.0.1:5500/HTML/appointment.html">Click To Proceed To Appointment Page</a>
+                <p>Name: Dr. ANUBHAV</p>
+                <p>Specialization: Neurology</p>
+                <p>Email: anubhav@gmail.com</p>
+                <p>Working Hours: 10am - 6pm</p>
+            </div>
+            <div class="block">
+                <img src="../doctor images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" alt="Doctor 4">
+                <a href="http://127.0.0.1:5500/HTML/appointment.html">Click To Proceed To Appointment Page</a>
+                <p>Name: Dr. SAKSHI</p>
+                <p>Specialization: Dermatology</p>
+                <p>Email: sakshi@gmail.com</p>
+                <p>Working Hours: 8:30am - 4:30pm</p>
+            </div>
+            <div class="block">
+                <img src="../doctor images/5.jpg" alt="Doctor 5">
+                <a href="http://127.0.0.1:5500/HTML/appointment.html">Click To Proceed To Appointment Page</a>
+                <p>Name: Dr. RUHANI</p>
+                <p>Specialization: Orthopedics</p>
+                <p>Email: ruhani@gmail.com</p>
+                <p>Working Hours: 11am - 7pm</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

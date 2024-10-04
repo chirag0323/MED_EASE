@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTI_SPECIALITY HOSPITAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Common styles */
+        body {
+            background-color: white;
+            margin: 0;
+        }
+
+        .scroll-bar {
+            overflow: auto;
+        }
+
+        .topbar {
+            background-color: black;
+            position: relative;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            padding: 17px 15px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar .navigation ul li {
+            margin-right: 10px;
+        }
+
+        .topbar .navigation ul li:last-child {
+            margin-right: 0;
+        }
+
+        .topbar .navigation ul li span,
+        .topbar .navigation ul li a {
+            color: silver;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            padding: 6px 40px;
+        }
+
+        .topbar .navigation ul li a button {
+            color: black;
+        }
+
+        .topbar .navigation ul li a:hover {
+            background-color: darkcyan;
+        }
+
+        .topbar .navigation ul li.right-align {
+            margin-left: auto;
+        }
+
+        .secondbar {
+            background-color: black;
+            padding: 7px 15px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .secondbar .logoo {
+            margin-left: 50px;
+        }
+
+        .secondbar .logoo img {
+            width: 130px;
+        }
+
+        .secondbar .navigation2 {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .secondbar .navigation2 a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 55px;
+            border-radius: 20px;
+        }
+
+        .secondbar .navigation2 a:hover {
+            background-color: darkcyan;
+        }
+
+        /* Gallery styles */
+        .gallery-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-card:hover .card-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-bar">
+        <!-- Navigation Bars -->
+        <div class="topbar">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="ambulance.html">Emergency Booking</a>
+                    </li>
+                    <li>
+                        <!-- <a href="https://neelamhospital.com/">ONLINE REPORT</a> -->
+                        <a href="appointment.html">Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="secondbar">
+            <div class="logoo">
+                <a href="frontend.html">
+                    <img src="../IMAGES/MedEase Logo 2.jpg" alt="">
+                </a>
+            </div>
+            <div class="navigation2">
+                <a href="frontend.html">
+                    <i class="fa-solid fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html">
+                    <i class="fa-solid fa-question"></i>
+                    <span>About</span>
+                </a>
+                <a href="Speciality.html">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Our Specialties</span>
+                </a>
+                <a href="Facility.html">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Facilities</span>
+                </a>
+                <a href="Gallery.html">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="Career.html">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <span>Career</span>
+                </a>
+                <a href="Contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+            <div class="gallery-card">
+                <img src="../IMAGES/1.jpg" alt="Image 1">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/21.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <!-- Add more gallery cards as needed -->
+            <div class="gallery-card">
+                <img src="../IMAGES/22.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/4.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/23.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/6.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/7.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/8.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/9.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/10.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/11.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/12.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/13.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/14.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/15.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/16.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/17.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/18.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/19.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="../IMAGES/20.jpg" alt="Image 2">
+                <div class="card-overlay">
+                    <!-- Add any overlay content if needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
